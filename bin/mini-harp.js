@@ -8,4 +8,15 @@ var createMiniHarp = require("mini-harp"),
 
 console.log("Starting mini-harp on http://localhost:" + port);
 app
+    // .use(function(request, response, next) {
+    //     console.log()
+    //     console.log("[%s]  %s  %s  %d  \"%s\"",
+    //         (new Date()).toISOString(),
+    //         request.method,
+    //         request.url,
+    //         response.statusCode,
+    //         request.headers['user-agent']
+    //     );
+    //     next();
+    // })
     .listen(port);
