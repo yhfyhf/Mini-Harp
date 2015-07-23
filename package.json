@@ -1,0 +1,27 @@
+{
+  "name": "mini-harp",
+  "version": "1.0.0",
+  "description": "A web server that serves static files with built-in preprocessing like Harp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "mini-harp": "./bin/mini-harp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yhfyhf/mini-harp.git"
+  },
+  "author": "Haofei Ying",
+  "license": "IDC(I Don't Care)",
+  "bugs": {
+    "url": "https://github.com/yhfyhf/mini-harp/issues"
+  },
+  "homepage": "https://github.com/yhfyhf/mini-harp",
+  "dependencies": {
+    "connect": "^3.0.1",
+    "minimist": "^1.1.2",
+    "serve-static": "^1.9.3"
+  }
+}
