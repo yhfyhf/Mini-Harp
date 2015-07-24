@@ -1,9 +1,10 @@
 var connect = require('connect');
-var log = require('./lib/processor/log');
 var serveStatic = require('serve-static');
+var log = require('./lib/log');
+var serveIndex = require('./lib/serveIndex');
+var mime = require('./lib/mime');
 var makeJade = require('./lib/processor/jade');
 var makeLess = require('./lib/processor/less');
-var serveIndex = require('./lib/processor/serveIndex');
 
 module.exports = function(root) {
     return connect()
@@ -11,5 +12,6 @@ module.exports = function(root) {
         .use(serveIndex(root))
         .use(makeJade(root))
         .use(makeLess(root))
-        .use(serveStatic(root));
+        .use(serveStatic(root))
+        .use(mime());
 };
